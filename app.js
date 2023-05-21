@@ -1,6 +1,7 @@
 // require packages used in the project
 const express = require('express')
 const mongoose = require('mongoose')
+const exphbs = require('express-handlebars')
 
 // 僅在非正式環境時，使用 dotenv
 if (process.env.NODE_ENV !== 'production') {
@@ -24,9 +25,13 @@ db.once('open', () => {
   console.log('MongoDB connected!')
 })
 
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
+app.set('view engine', 'handlebars')
+
 // routes setting
+// URL Shortener home page
 app.get('/', (req, res) => {
-  res.send('This is url shortener.')
+  res.render('index')
 })
 
 // start and listen on the Express server
