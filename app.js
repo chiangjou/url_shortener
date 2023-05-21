@@ -37,7 +37,6 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 
 // routes setting
-// Home
 app.get('/', (req, res) => {
   res.render('index')
 })
