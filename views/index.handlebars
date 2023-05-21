@@ -1,12 +1,8 @@
 <form action="/" method="POST">
-  <div>
-    <input type="url" id="url" name="url" placeholder="Input URL here" required />
+  <div class="container">
+    <input type="url" id="originalURL" name="originalURL" placeholder="Input URL here" style="vertical-align: middle;" required />
+    <button type="submit" class="btn btn-primary">Shorten</button>
   </div>
-
-  <div>
-    <button type="submit" class="btn">Shorten</button>
-  </div>
-
 </form>
 
 {{#if shortURL}}
