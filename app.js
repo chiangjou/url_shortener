@@ -3,6 +3,9 @@ const express = require('express')
 const mongoose = require('mongoose')
 const exphbs = require('express-handlebars')
 
+// 載入 URL model
+const URL = require('./models/url')
+
 // 僅在非正式環境時，使用 dotenv
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config()
@@ -29,7 +32,7 @@ app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
 
 // routes setting
-// URL Shortener home page
+// Home
 app.get('/', (req, res) => {
   res.render('index')
 })
