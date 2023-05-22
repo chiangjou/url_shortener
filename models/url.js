@@ -2,11 +2,15 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const urlSchema = new Schema({
-  shortURL: {
+  originalURL: {
     type: String,
     required: true
   },
-  originalURL: {
+  randomCharacter: {
+    type: String,
+    required: true
+  },
+  transformedURL: {
     type: String,
     required: true
   },

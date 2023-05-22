@@ -13,7 +13,7 @@ const charaterArray = upperCaseLetters.split('').concat(lowerCastLetters.split('
 
 const generatedCharacter = (array) => {
   let result = ''
-  for (i = 0; i < 5; i++) {
+  for (let i = 0; i < 5; i++) {
     const index = Math.floor(Math.random() * array.length)
     result += array[index]
   }
@@ -24,7 +24,7 @@ db.once('open', () => {
   URL.create({
     originalURL: 'https://www.google.com',
     randomCharacter: generatedCharacter(charaterArray),
-    generatedURL: `http://localhost:3000/${generatedCharacter(charaterArray)}`
+    transformedURL: `http://localhost:3000/${generatedCharacter(charaterArray)}`
   })
   console.log('URL generated')
 })

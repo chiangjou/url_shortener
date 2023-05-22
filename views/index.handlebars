@@ -1,15 +1,4 @@
 <form action="/" method="POST">
-  <div class="container">
     <input type="url" id="originalURL" name="originalURL" placeholder="Input URL here" style="vertical-align: middle;" required />
     <button type="submit" class="btn btn-primary">Shorten</button>
-  </div>
 </form>
-
-{{#if shortURL}}
-<div class="result">
-  <h3>Success! Please use this link:</h3>
-  <p id="generatedURL"></p>
-  <button class="copy" onclick="copy()">Copy</button>
-</div>
-
-{{/if}}
