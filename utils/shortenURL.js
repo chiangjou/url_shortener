@@ -3,7 +3,7 @@ const BASE_62_CHAR = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
 // 字元表的最大 Index 
 const MAX = 61
 // 字元表的最小 Index 
-const NIN = 0
+const MIN = 0
 
 /**
  * 依照輸入的短網址長度，產生對應的亂數字串
