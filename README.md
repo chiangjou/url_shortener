@@ -1,5 +1,8 @@
 # URL Shortener 短網址產生器
 
+![image](./public/image/image_01.png)
+![image](./public/image/image_02.png)
+
 ## 介紹
 
 運用 Express & MongoDB 打造的網頁，進行短網址生成。
