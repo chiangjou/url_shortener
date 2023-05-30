@@ -1,18 +1,18 @@
 {{#if shortURL}}
-    <div class="result">
-        <h3>Success! Please use this link:</h3>
-        <p id="generatedURL">{{origin}}/{{shortURL}}</p>
-    </div>
-    <button class="copy" onclick="copy()">Copy</button>
+<div class="result">
+    <h3>Success! Please use this link:</h3>
+    <p id="generatedURL">{{origin}}/{{shortURL}}</p>
+</div>
+<button class="copy" onclick="copy()">Copy</button>
 
-    <script>
-        function copy() {
-            const URL = document.getElementById("generatedURL")
-            navigator.clipboard.writeText(URL.innerText)
-                .then(() => alert("copied"))
-                .catch(error => console.log(error))
-        }
-    </script>
+<script>
+    function copy() {
+        const URL = document.getElementById("generatedURL")
+        navigator.clipboard.writeText(URL.innerText)
+            .then(() => alert("copied"))
+            .catch(error => console.log(error))
+    }
+</script>
 
 
 {{else}}
