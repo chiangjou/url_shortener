@@ -7,9 +7,9 @@
 
     <script>
         function copy() {
-            const URL = document.getElementById('generatedURL')
+            const URL = document.getElementById("generatedURL")
             navigator.clipboard.writeText(URL.innerText)
-                .then(() => alert('copied'))
+                .then(() => alert("copied"))
                 .catch(error => console.log(error))
         }
     </script>

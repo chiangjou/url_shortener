@@ -3,24 +3,20 @@ function sample(array) {
   return array[index]
 }
 
-function generatedURL() {
-  const lowerCaseLetters = 'abcdefghijklmnopqrstuvwxyz'
-  const upperCaseLetters = lowerCaseLetters.toUpperCase()
-  const numbers = '1234567890'
+const lowerCaseLetters = "abcdefghijklmnopqrstuvwxyz"
+const upperCaseLetters = lowerCaseLetters.toUpperCase()
+const numbers = "1234567890"
 
+module.exports = function shortenURL(amount) {
   let collection = []
-  collection = collection.concat(lowerCaseLetters.split(''))
-  collection = collection.concat(upperCaseLetters.split(''))
-  collection = collection.concat(numbers.split(''))
+  collection = collection.concat(lowerCaseLetters.split(""))
+  collection = collection.concat(upperCaseLetters.split(""))
+  collection = collection.concat(numbers.split(""))
 
   // start generating url
-  let url = ''
-  for (let i = 0; i < 5; i++) {
-    url += sample(collection)
+  let id = ""
+  for (let i = 0; i < amount; i++) {
+    id += sample(collection)
   }
-
-  // return the generated url
-  return url
+  return id
 }
-
-module.exports = generatedURL
